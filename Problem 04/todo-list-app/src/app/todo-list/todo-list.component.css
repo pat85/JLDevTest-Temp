@@ -1,0 +1,27 @@
+/* src/app/todo-list/todo-list.component.css */
+.todo-list-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  

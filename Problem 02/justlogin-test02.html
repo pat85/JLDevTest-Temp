@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Selection</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Use a readable font */
+            background-color: #f0f0f0; /* Light background color */
+        }
+
+        .item-list {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+            border: 1px solid #ccc; /* Light border for the list */
+            border-radius: 8px; /* Rounded corners */
+            background-color: white; /* White background for the list */
+        }
+
+        .item-list li {
+            padding: 10px 20px; /* Padding for items */
+            cursor: pointer; /* Change cursor on hover */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+
+        .item-list li:hover {
+            background-color: #e0e0e0; /* Highlight on hover */
+        }
+
+        .item-list li.bold {
+            font-weight: bold; /* Bold text for selected item */
+        }
+    </style>
+</head>
+<body>
+    <ul class="item-list">
+        <li onclick="selectItem(this)">Green</li>
+        <li onclick="selectItem(this)">Yellow</li>
+        <li onclick="selectItem(this)">Grey</li>
+        <li onclick="selectItem(this)">Pink</li>
+        <li onclick="selectItem(this)">Blue</li>
+    </ul>
+
+    <script>
+        function selectItem(element) {
+            // Remove bold class from all items
+            const items = document.querySelectorAll('.item-list li');
+            items.forEach(item => {
+                item.classList.remove('bold');
+            });
+
+            // Show alert with the content of the clicked item
+            alert(element.textContent);
+
+            // Add bold class to the clicked item
+            element.classList.add('bold');
+        }
+    </script>
+</body>
+</html>
